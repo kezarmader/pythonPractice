@@ -23,19 +23,13 @@ def main():
 def add(fNum, sNum) -> ListNode:
     rNumHead = rNum = ListNode()
     carry = 0
-    while fNum and sNum:
-        result = carry + fNum.value + sNum.value
+    while fNum or sNum or carry > 0:
+        result = carry + (fNum.value if fNum else 0) + (sNum.value if sNum else 0)
         rNum.next = ListNode(result % 10)
         carry = result // 10
-        fNum = fNum.next
-        sNum = sNum.next
+        fNum = fNum.next if fNum else None
+        sNum = sNum.next if sNum else None
         rNum = rNum.next
-    while fNum:
-        rNum.next = ListNode(fNum)
-    while sNum:
-        rNum.next = ListNode(sNum)
-    if carry > 0:
-        rNum.next = ListNode(carry)
     return rNumHead.next
 
 def readList():
