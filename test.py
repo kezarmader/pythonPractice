@@ -1,8 +1,4 @@
-import collections
+import numpy as np
 
-d = collections.defaultdict(list)
-
-d[1] = 1
-
-if not d.get(2):
-    print('empty')
+a = [[0,1,0,0,0], [1,0,1,0,0], [1,1,0,1,1], [0,0,1,0,1],[1,0,0,0,0]]
+print(a * a)
