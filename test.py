@@ -1,4 +1,3 @@
-import numpy as np
+import random
 
-a = [[0,1,0,0,0], [1,0,1,0,0], [1,1,0,1,1], [0,0,1,0,1],[1,0,0,0,0]]
-print(a * a)
+print(random.randrange(2))
