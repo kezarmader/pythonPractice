@@ -35,10 +35,7 @@ def mergeSortReq(a, start, end):
         res.append(a[j])
         j += 1
     
-    k = 0
-    for i in range(start, end+1):
-        a[i] = res[k]
-        k += 1
+    a[start:end+1] = res
     
 def readList() -> list:
     result = []
