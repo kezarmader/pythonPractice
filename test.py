@@ -1,3 +1,8 @@
-import random
+str = '1+1 - 1'
 
-print(random.randrange(2))
+token = '';
+tokens = []
+for c in str:
+    if c == '+':
+        tokens.append(int(token))
+        tokens.append('+')
