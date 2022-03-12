@@ -1,8 +1,3 @@
-str = '1+1 - 1'
-
-token = '';
-tokens = []
-for c in str:
-    if c == '+':
-        tokens.append(int(token))
-        tokens.append('+')
+nums =[[2,0],[10,4],[1,20],[100,10]]
+nums.sort()
+print(nums)
