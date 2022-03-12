@@ -2,11 +2,11 @@ def main():
     text = 'CXSAQWERT'
     words = {'CAT', 'CAR', 'CART', 'ART', 'CAAAT'}
 
-    searchWordTable = buildIndexTable(text)
-    wordDic = buildWordDic(words)
+    searchWordTable = buildIndexTable(text) #O(N)
+    wordDic = buildWordDic(words) #O(N)
 
     result = []
-    for i in range(len(text)):
+    for i in range(len(text)): #O(N^2)
         if text[i] in wordDic:
             slate = [text[i]]
             dfs(text[i], wordDic, slate, i, searchWordTable, result)
