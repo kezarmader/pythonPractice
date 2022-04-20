@@ -16,3 +16,4 @@ def helper(s, start, end, error):
     return False
 
 print(checkPalindrome('abccbca'))
+print(checkPalindrome('abbcbca'))
