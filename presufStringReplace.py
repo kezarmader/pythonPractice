@@ -37,13 +37,12 @@ def Solution(text, findWordList):
     result = []
     i = 0
     while i < len(text):
-        if trie.exists(text[i]):
-            if trie.findWord(text[i:i + consLen]):
-                result.append('$')
-                result.append(text[i:i + consLen])
-                result.append('@')
-                i += consLen
-                continue
+        if trie.findWord(text[i:i + consLen]):
+            result.append('$')
+            result.append(text[i:i + consLen])
+            result.append('@')
+            i += consLen
+            continue
 
         result.append(text[i])
         i += 1
