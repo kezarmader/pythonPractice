@@ -42,7 +42,7 @@ def Solution(text, findWordList):
                 result.append('$')
                 result.append(text[i:i + consLen])
                 result.append('@')
-                i += 2
+                i += consLen
                 continue
 
         result.append(text[i])
